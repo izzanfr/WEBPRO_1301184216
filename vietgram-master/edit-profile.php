@@ -5,7 +5,7 @@
     include("connection.php");
     $data_photo = mysqli_query($conn,"select * from photo where username='". $_SESSION['username']. "'");
     $jmlData = mysqli_num_rows($data_photo);
-    while($rows[]=mysqli_fetch_array($data_photo));
+    while($rows[] = mysqli_fetch_array($data_photo));
 ?>
 <head>
     <meta charset="UTF-8">
