@@ -9,7 +9,7 @@ include('connection.php');
         $_SESSION["website"] = $_POST["website"];
         $_SESSION["bio"] = $_POST["bio"];
         $_SESSION["email"] = $_POST["email"];
-        $_SESSION["phone_number"] = $_POST["phone"];
+        $_SESSION["nohp"] = $_POST["phone"];
         $_SESSION["gender"] =$_POST["gender"];
         header("location:profile.php");
     } else {
