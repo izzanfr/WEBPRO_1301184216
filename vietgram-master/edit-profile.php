@@ -3,9 +3,9 @@
 <?php 
     session_start();
     include("connection.php");
-    $data_photo = mysqli_query($conn,"select * from photo where username='". $_SESSION['username']. "'");
+    $data_photo = mysqli_query($conn,"select * from profile where username='". $_SESSION['username']. "'");
     $jmlData = mysqli_num_rows($data_photo);
-    while($rows[] = mysqli_fetch_array($data_photo));
+    while($rows[]=mysqli_fetch_array($data_photo));
 ?>
 <head>
     <meta charset="UTF-8">
@@ -83,19 +83,19 @@
                 </div>
                 <div class="form__row">
                     <label for="phone" class="form__label">Phone Number:</label>
-                    <input name="phone" type="tel" class="form__input" value="<?php echo $_SESSION['nohp']?>"/>
+                    <input name="phone" type="text" class="form__input" value="<?php echo $_SESSION['nohp']?>"/>
                 </div>
                 <div class="form__row">
                     <label for="gender" class="form__label">Gender:</label>
                     <select name="gender">
                         <?php
-                            if($_SESSION['gender'] == 0) {
+                            if($_SESSION['gender'] == "Female") {
                         ?>
-                            <option value="0" selected>Female</option>
-                            <option value="1">Male</option>
+                            <option value="Female" selected>Female</option>
+                            <option value="Male">Male</option>
                         <?php } else { ?>
-                            <option value="0">Female</option>
-                            <option value="1" selected>Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Male" selected>Male</option>
                         <?php } ?>
                     </select>
                 </div>
