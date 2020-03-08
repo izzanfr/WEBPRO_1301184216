@@ -71,7 +71,7 @@
                 </div>
                 <div class="form__row">
                     <label for="website" class="form__label">Website:</label>
-                    <input name="website" type="text" class="form__input" value="<?php echo $_SESSION['website']?>"/>
+                    <input name="website" type="url" class="form__input" value="<?php echo $_SESSION['website']?>"/>
                 </div>
                 <div class="form__row">
                     <label for="bio" class="form__label">Bio:</label>
